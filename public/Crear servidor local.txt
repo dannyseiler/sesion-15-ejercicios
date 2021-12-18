@@ -1,0 +1,44 @@
+
+1. Creamos una carpeta nueva donde vamos a guardar todos los archivos del sitio web
+
+2. Abrimos una terminal de Windows y nos ubicamos dentro de la carpeta
+
+3. Revisar la versión de NodeJS escribiendo: node -v
+
+4. Luego de esto, en la terminal iniciamos el paquete de NodeJS:  npm init
+
+5. Nos va a dar una serie de preguntas para responder y de momento las dejamos por default, presionando Enter
+
+6. Una vez terminado, nos crea dentro de la carpeta, un archivo package.json el cual es el que maneja los archivos del Servidor
+
+7. Creamos desde el Visual Studio Code, un archivo index.js
+
+8. Ahora, para crear el servidor necesitaremos un módulo. Nodejs se basa en módulos para poder funcionar. 
+    Para ello, necesitaremos instalar un módulo que se llama Express, que es entre otras cosas, hacer servidores web.
+
+9. Desde la terminal, tipeamos: npm install express --save   Y esto estará instalando Express en nuestra computadora.
+
+10. Una vez terminado, veremos desde Visual Studio Code, una nueva carpeta llamada node_modules y un conjunto de archivos.
+
+11. Para hacer una petición de un servidor debemos escribir en el index.js :
+
+    const express = require('express');
+    const app = express();
+
+    app.use(express.static(__dirname + '/public/'));
+
+    app.listen('3000', function(){
+      console.log('Servidor web escuchando en el puerto 3000');
+    });
+
+    console.log('Servidor iniciado');
+
+12. Luego, creamos una carpeta nueva llamada PUBLIC y dentro creamos el archivo index.html
+
+13. Ahora lo que tenemos que hacer es iniciarlo para ver si funciona. Para eso, debemos irnos a nuestra terminal y escribir: node index.js
+
+    Y así veremos desde la terminal, que ya se ha iniciado el servidor.
+
+    También podemos ver el resultado desde nuestro navegador tipeando: localhost:3000
+
+14. Listo!
